@@ -1,0 +1,272 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/*CORPO-PRINCIPAL*/
+
+body {
+  background-color: #a5b4c2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+/*CORPO-SECUNDARIO*/
+
+.container {
+  width: 100%;
+  max-width: 1000px;
+  min-height: 1000px;
+  margin: 50px;
+  background: #fff;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  box-shadow: 0 35px 55px;
+}
+
+/*SECÇAO ESQUERDO*/
+
+.container .left_side {
+  background: #03374f;
+  padding: 50px;
+}
+
+/*SECÇAO DIREITO*/
+
+.container .right_side {
+  position: relative;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+}
+/*
+Faz o .sobre ocupar o espaço restante 
+e empurra o rodapé para baixo
+*/
+.sobre {
+  flex: 1;
+}
+
+/*CAIXA-DA-IMAGEM*/
+
+.profileText .imgBx {
+  position: relative;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  border: 5px solid #03374f;
+  overflow: hidden;
+  box-shadow: 0 0 0 5px #fff;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/*IMAGEM*/
+
+.profileText .imgBx img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/*TITULOS DA DIREITA*/
+
+.titulos {
+  border-bottom: 2px solid rgba(255, 255, 255, 0.778);
+  margin-right: -50px;
+  color: #fff;
+  margin-bottom: 15px;
+  margin-top: 20px;
+  letter-spacing: 1px;
+}
+
+/*INFORMAÇOES DE CONTACTOS*/
+
+.contactInfo ul li {
+  position: relative;
+  list-style: none;
+  margin: 10px 0;
+  cursor: pointer;
+}
+.contactInfo ul li .icon {
+  color: #ffffffbf;
+  display: inline-block;
+  width: 30px;
+  font-size: 18px;
+}
+.contactInfo ul li span {
+  color: #ffffffbf;
+  font-size: 15px;
+}
+
+/*IDIOMAS*/
+
+/*AJUSTE-PERCENTAGEM PARA HORIZONTAL*/
+
+/*
+.contactInfo.lingua ul li{
+  display: grid;
+  gap: 20px;
+  grid-template-columns: repeat(2, 1fr);
+}*/
+
+.contactInfo.lingua .percent {
+  position: relative;
+  width: 100%;
+  height: 7px;
+  background-color: #7db2c9;
+  display: block;
+  margin-top: 5px;
+}
+.contactInfo.lingua .percent div {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  background-color: #fff;
+}
+
+/*REFERENCIA*/
+
+.contactInfo.Ref p {
+  text-align: justify;
+  color: #fff;
+}
+
+/*HOBBIES*/
+
+.contactInfo.Hob p {
+  color: #ffffffbf;
+  margin-right: -50px;
+  font-size: 14px;
+}
+.contactInfo.Hob .icon {
+  font-size: 30px;
+}
+.contactInfo.Hob .icon-hob {
+  padding: 30px;
+  display: flex;
+  margin-top: 20px;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+}
+
+/*CONTEUDO DIREITO*/
+
+.about {
+  display: flex;
+  gap: 12px;
+  margin-left: 25px;
+  color: #03374f;
+}
+.about h2 {
+  font-size: 30px;
+  font-weight: 900;
+}
+.about p {
+  font-weight: 100;
+  font-size: 30px;
+}
+.til {
+  margin-left: 25px;
+  color: #03374f;
+}
+
+.sobre .titulo-2 {
+  margin-top: 30px;
+  color: #03374f;
+  list-style: none;
+}
+.sobre .titulo-2 .icon {
+  margin-left: -40px;
+  background-color: white;
+  font-size: 30px;
+}
+
+.sobre .titulo-2 .secao {
+  display: flex;
+  margin-bottom: 15px;
+  margin-left: 40px;
+  border-bottom: 2px solid rgba(93, 137, 169, 0.778);
+  margin-right: -40px;
+}
+
+.sobre .titulo-2 .secao .travecao {
+  font-size: 20px;
+  letter-spacing: 1px;
+  margin-top: -30px;
+}
+.sobre .titulo-2 p {
+  color: #03374f;
+  text-align: justify;
+  text-indent: 20px;
+  margin-left: 20px;
+}
+.titulo-2 h4,
+.titulo-2 h5 {
+  margin-left: 40px;
+}
+
+/*SKILLS*/
+
+.habilidades {
+  display: flex;
+  gap: 50px;
+  margin-left: 40px;
+  justify-content: space-between;
+}
+
+.habilidades ul li {
+  list-style: none;
+  margin-bottom: 10px;
+}
+
+.edu {
+  border-left: 3px solid #03374f;
+  margin-left: 19px;
+}
+/*
+position: relative;(serve de referencia para o h4::before)
+*/
+.edu h4 {
+  position: relative;
+  margin-bottom: 3px;
+  font-weight: 900;
+  font-size: 16px;
+}
+.edu h5 {
+  font-weight: 300;
+}
+/*
+content: "";(cria elemento vazio)
+position: absolute;(posicionar manualmente o elemento em relacao ao h4)
+*/
+.edu h4::before {
+  content: "";
+  position: absolute;
+  width: 13px;
+  height: 13px;
+  background: #03374f;
+  border-radius: 50px;
+  left: -48px;
+  top: 5px;
+}
+
+/*
+13px-cima e baixo
+40px -esquerda e direita
+*/
+.rodape {
+  margin-left: -40px;
+  margin-right: -40px;
+  margin-bottom: -40px;
+  padding: 13px 40px;
+  background-color: #03374f;
+}
